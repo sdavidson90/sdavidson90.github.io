@@ -1,0 +1,102 @@
+/*MOBILE SIZING*/
+.footer {
+    background-color: $color-black;
+    color: $color-white;
+    padding: 0 1rem;
+    @include mobile-para;
+    &__title {
+        @include mobile-header;
+        padding: 2rem 0 1.5rem 0;
+    }
+    &__social {
+        padding-bottom: 2rem;
+        &-link {
+        margin-right: 1.6rem;
+        }
+    }
+    &__logo {
+        display: none;
+    }
+    &__contact {
+        &-name {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+            padding-bottom: 1.25rem;
+        }
+        &-location,
+        &-link {
+            color: $color-silver;
+            text-decoration: none;
+            margin-bottom: 1.25rem;
+        }
+    }
+    &__copyright {
+        color: $color-silver;
+        padding-bottom: 2rem;
+    }
+}
+
+/*TABLET SIZING*/
+@include medium {
+    .footer {
+        padding: 0 1.5rem;
+        @include h4-para;
+        &__main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__title {
+            @include h1-header;
+            padding: 3rem 0 3.5rem 0;
+        }
+        &__social {
+            padding-bottom: unset;
+            margin-right: auto;
+            padding-left: 4.25rem;
+            &-link {
+                margin-right: 1.5rem;
+            }
+        }
+        &__logo {
+            display: inherit;
+            margin-left: auto;
+            height: 1.5rem;
+            width: 7.5rem;
+        }
+        &__contact {
+            padding-right: 2rem;
+            &-name {
+                font-size: 1rem;
+                line-height: 1.5rem;
+                padding-bottom: 1.5rem;
+            }
+            &-location {
+                padding-bottom: 0.25rem;
+            }
+            &-link {
+                margin-bottom: 2.5rem;
+            }
+            &-container {
+                display: flex;
+                justify-content: left;
+            }
+        }
+    }
+}
+
+/*DESKTOP SIZING*/
+@include large {
+    .footer {
+        padding: 0 11.25rem;
+        &__social {
+            padding-left: 3.25rem;
+        }
+        &__contact {
+            padding-right: 3.25rem;
+            &-container {
+                justify-content: left;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+main {
+    padding: unset;
+}
+
+/*MOBILE SIZING*/
+.hero {
+    height: 11.4375rem;
+    width: 100%;
+    background-image: url(../assets/hero/heroimage.jpg);
+    @include background;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    &__opacity {
+        background-color: rgba($color: black, $alpha: 0.5);
+        height: inherit;
+        width: inherit;
+        display: flex;
+        align-items: center;
+    }
+    &__title {
+        @include mobile-header;
+        color: $color-white;
+        width: 13rem;
+        padding-left: 1rem;
+    }
+}
+
+/*TABLET SIZING*/
+@include medium {
+    .hero {
+        height: 25rem;
+        &__title {
+            @include hero-header;
+            width: 32rem;
+            padding-left: 1.5rem;
+        }
+    }
+}
+
+/*DESKTOP SIZING*/
+@include large {
+    .hero {
+        height: 41.875‬rem;
+        &__title {
+            padding-left: 11.25rem;
+        }
+    }
+}

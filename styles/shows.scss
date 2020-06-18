@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+
+@import './partials/colors';
+@import './partials/fonts';
+@import './partials/breakpoints';
+@import './partials/mixins';
+@import './partials/navbar';
+@import './partials/hero-two';
+@import './partials/showstable';
+@import './partials/footer';

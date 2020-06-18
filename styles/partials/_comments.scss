@@ -1,0 +1,178 @@
+/*MOBILE SIZING*/
+.comments {
+  background-color: $color-white;
+  padding: 0 1rem;
+  font-family: "avenir-demi";
+  color: $color-silver;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+  margin-bottom: 2.5rem;
+  &__title {
+    @include mobile-header;
+    color: $color-black;
+    padding: 2rem 0 2.5rem 0;
+  }
+
+  &__input {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $color-mercury;
+    &-photo {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 2rem;
+      margin-top: 1rem;
+      margin-right: 1rem;
+      background-image: url(../assets/Images/Mohan-muruge.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &-info-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      padding-bottom: 2rem;
+      width: 14rem;
+      &-name {
+        height: 1.2rem;
+        background-color: $color-alabaster;
+        border-radius: 0.25rem;
+        border: 1.5px solid $color-mercury;
+        padding: 0.625rem;
+        @include mobile-para;
+        margin-bottom: 1.5rem;
+        resize: none;
+      }
+      &-comment {
+        height: 1.2rem;
+        background-color: $color-alabaster;
+        border-radius: 0.25rem;
+        border: 1.5px solid $color-mercury;
+        padding: 0.625rem;
+        padding-bottom: 3rem;
+        @include mobile-para;
+        margin-bottom: 1.5rem;
+        resize: none;
+      }
+      &-name:focus,
+      &-comment:focus {
+        border: 1.5px solid $color-black;
+        outline-width: 0;
+      }
+      &-submit {
+        background-color: $color-black;
+        color: $color-white;
+        font-family: "avenir-demi";
+        height: 3rem;
+        border-radius: 4px;
+        border: none;
+        font-size: 0.8125rem;
+        &:focus {
+          outline-width: 0;
+        }
+        &:hover {
+          background-color: black;
+        }
+      }
+    }
+  }
+
+  //COMMENT SECTION
+  .comments__new {
+    width: 100%;
+    color: $color-black;
+    border-bottom: 1px solid $color-mercury;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    max-width: 33rem;
+    margin: 0 auto;
+    &-image {
+      height: 3rem;
+      min-width: 3rem;
+      background-color: $color-mercury;
+      border-radius: 2rem;
+      align-self: flex-start;
+      margin-right: 12px;
+    }
+    &-name {
+      font-size: 0.875rem;
+      margin-right: auto;
+      padding-bottom: 1rem;
+      width: 50vw;
+    }
+    &-time {
+      font-family: "avenir-regular";
+      color: $color-silver;
+    }
+    &-comment {
+      font-family: "avenir-regular";
+    }
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 72vw;
+  }
+}
+
+/*MOBILE SIZING*/
+@include medium {
+  .comments {
+    &__title {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      padding: 3rem 0 3.5rem 0.5rem;
+    }
+    &__input {
+      flex-direction: row;
+      justify-content: center;
+      width: 33rem;
+      margin: 0 auto;
+      &-photo {
+        margin-right: 1.25rem;
+      }
+      &-info-form {
+        width: 28.75rem;
+        &-submit {
+          width: 10rem;
+          align-self: flex-end;
+        }
+      }
+    }
+    &__new {
+      justify-content: center;
+      flex-direction: row;
+      margin: 0 auto;
+      width: 33rem;
+      &-name {
+        margin: 0;
+        padding-right: 1rem;
+        max-width: 350px;
+      }
+      &-image {
+        margin-right: 1rem;
+        min-width: 3rem;
+      }
+      &-comment {
+        width: 25rem;
+      }
+    }
+    &__container {
+      justify-content: flex-start;
+    }
+  }
+}
+
+/*DESKTOP SIZING*/
+@include large {
+  .comments {
+    &__title {
+      padding-left: 10.25rem;
+    }
+    &__new-image {
+      min-width: 3rem;
+    }
+  }
+}

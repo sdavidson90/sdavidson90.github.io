@@ -1,0 +1,82 @@
+/*MOBILE SIZING*/
+.hero {
+    background-image: url(../assets/hero/showsheroone.jpg);
+    @include background;
+    height: 29.5rem;
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-content: left;
+    &__opacity {
+        background-color: rgba($color: black, $alpha: 0.5);
+        height: inherit;
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 4rem 1rem 2rem 1rem;
+    }
+    &__title {
+        font-family: 'avenir-regular';
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        padding-bottom: 1rem;
+        &-sub {
+        font-family: 'avenir-bold';
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        padding-bottom: 4rem;
+        }
+        &-song-inset {
+            width: 18rem;
+            height: 6rem;
+        }
+    }
+}
+
+/*TABLET SIZING*/
+@include medium {
+    .hero {
+        height: 41.875rem;
+        &__opacity {
+            padding: 6rem 9rem 6rem 1.5rem;
+        }
+        &__title {
+            font-family: 'avenir-bold';
+            font-size: 1.5rem;
+            line-height: 2rem;
+            padding-bottom: 2.5rem;
+            &-sub {
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+            padding-bottom: 3.4rem;
+            }
+            &-song-inset {
+                width: 27.25rem;
+                height: 9.125rem;
+            }
+        }
+    }
+}
+
+/*DESKTOP SIZING*/
+@include large {
+    .hero {
+        &__opacity {
+            padding: 10rem 11.25rem 0 11.25rem;
+            flex-direction: row;
+        }
+        &__title {
+            padding-bottom: 3rem;
+            &-sub {
+                width: 36.2rem;
+            }
+            &-song {
+                align-self: center;
+                padding-bottom: 7.5rem;
+                padding-left: 4rem;
+            }
+        }
+    }
+}

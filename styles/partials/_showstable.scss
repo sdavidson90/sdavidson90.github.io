@@ -1,0 +1,154 @@
+/*MOBILE SIZING*/
+.shows {
+    padding: 2rem 1rem;
+    &__top{
+        display: none;
+    }
+    &__title {
+        color: $color-black;
+        padding-bottom: 1rem;
+        font-family: 'avenir-bold';
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    &__new {
+        padding: 1.5rem 0 1rem 0;
+        border-bottom: 1px solid $color-mercury;
+        display: flex;
+        flex-direction: column;
+    }
+    &__date,
+    &__venue,
+    &__location {
+        // display: none;
+        color: $color-silver;
+        padding-bottom: 1rem;
+        font-family: 'avenir-regular';
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        &-actual {
+            padding-bottom: 1.5rem;
+            color: $color-black;
+        }
+    }
+    &__date-actual {
+        font-family: 'avenir-demi';
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+    &__venue-actual {
+        font-family: 'avenir-regular';
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+    }
+    &__location-actual {
+        font-family: 'avenir-regular';
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        padding-bottom: 2rem;
+    }  
+        &__button {
+            background-color: $color-black;
+            color: $color-white;
+            font-family: 'avenir-demi';
+            width: 18.5rem;
+            height: 3rem;
+            border: none;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+            &:focus {
+                outline-width: 0;
+            }
+            &:hover {
+                background-color: black;
+            }
+        }
+}
+
+/*TABLET SIZING*/
+@include medium {
+    .shows {
+        padding: 2rem 1.5rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        &__title {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            padding-bottom: 1.5rem;
+        }
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'avenir-regular';
+            color: $color-silver;
+            &-venue,
+            &-date,
+            &-location {
+                width: 8.375rem;
+                font-size: 0.75rem;
+            }
+            &-venue {
+                padding-left: 2rem;
+            }
+        }
+        &__hidden {
+            visibility: hidden;
+            width: 10rem;
+        }
+        &__new {
+             flex-direction: row;
+             justify-content: space-between;
+             align-items: center;
+        }
+        &__date,
+        &__venue,
+        &__location {
+            display: none;
+            &-actual {
+                padding-bottom: 0;
+                width: 8.375rem;
+            }
+        }
+        &__date-actual {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+        &__location-actual {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+        }
+        &__venue-actual {
+            font-size: 0.875rem;  
+            line-height: 1.375rem;  
+        }
+        &__button {
+            width: 10rem;
+            height: 3rem;
+        }
+        &__venue-actual {
+            padding-left: 2rem;
+            }
+    }
+}
+
+/*DESKTOP SIZING*/
+@include large {
+    .shows {
+        padding: 2.5rem 11.25rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &__container {
+            width: 50.25rem;
+        }
+        &__new {
+            padding: 1rem 0;
+        }
+        &__top {
+            padding-bottom: 0.75rem;
+        }
+    }
+}

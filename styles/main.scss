@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+@import './partials/colors';
+@import './partials/fonts';
+@import './partials/breakpoints';
+@import './partials/mixins';
+@import './partials/navbar';
+@import './partials/hero';
+@import './partials/about';
+@import './partials/gallery';
+@import './partials/comments';
+@import './partials/footer';
