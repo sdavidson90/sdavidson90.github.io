@@ -10,7 +10,7 @@
     align-content: left;
     &__opacity {
         background-color: rgba($color: black, $alpha: 0.5);
-        height: inherit;
+        height: 100%;
         width: inherit;
         display: flex;
         flex-direction: column;
